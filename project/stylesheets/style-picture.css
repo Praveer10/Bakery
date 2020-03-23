@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "navbar navbar navbar navbar"
+  "content content content content"
+  "footer footer footer footer";
+}
+.navbar {
+  grid-area: navbar;
+  display: grid;
+  min-height: 50px;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  background-color: rgb(171, 235, 235);    
+  border: 2px solid blueviolet;
+}
+.navbar nav a{
+  color:black;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  
+}
+.navbar nav a:hover{
+  background-color: rgb(148, 233, 148);
+  font-weight: bold;
+}
+.navbar nav{
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.dropbtn {
+  color: black;
+  
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(189, 123, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(148, 233, 148);}
+
+.title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  text-decoration: aqua;
+  top: 10%;
+  padding-left: 300px;
+}
+.content{
+  display: grid;
+  grid-template-columns:  repeat(12,minmax(auto,60px)) 1fr;
+  grid-gap: 40px;
+  grid-area: content;
+  padding: 20px 0; 
+  min-height: calc(100vh - 80px - 40px);   
+}
+.cards{
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: 1fr repeat(12,minmax(auto,60px));
+  grid-gap: 40px;
+  height: fit-content;
+  box-shadow: paleturquoise;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.card{
+  grid-column-end: span 4 ;
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.card:hover{
+  transform: translateY(-7px);
+  }
+  
+.card_imgcontainer{
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_imgcontainer img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card_content{
+  padding: 20px;
+}
+.card_content p{
+  margin-bottom: 20px;
+}
+.card_info{
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+.order-btn{
+  margin-left: auto;
+  padding: 5px 20px;
+  background-color: navajowhite;
+  border-radius: 20px;
+}
+.order-btn:hover{
+  cursor: pointer;
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+  background-color: aquamarine;
+  min-height: 20px;
+  padding: 10px 10px;
+}

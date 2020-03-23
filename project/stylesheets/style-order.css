@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:3fr 3fr;
+    grid-template-areas: 
+    "navbar navbar "
+    "orderform cake-preview"
+    "popup popup"
+    "footer footer";
+}
+.navbar { 
+  grid-area: navbar;
+  display: grid;
+  min-height: 50px;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  background-color: rgb(171, 235, 235);    
+  border: 2px solid blueviolet;
+}
+.navbar nav a{
+  color:black;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  
+}
+.navbar nav a:hover{
+  background-color: rgb(148, 233, 148);
+  font-weight: bold;
+}
+.navbar nav{
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.dropbtn {
+  color: black;
+  
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(189, 123, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(148, 233, 148);}
+
+
+.content{
+    display: grid;
+    grid-area: content;
+      
+}
+.orderform{
+    padding: 0 0 0 50px;
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 10px;
+    border: 1px solid aqua;
+}
+.orderform{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info {
+    padding: 60px 0;
+}
+thead{
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+input[type=number]{
+  border-radius: 2px;
+  
+}
+input[type=number]:focus{
+  font-weight: bold;
+  border-color: aquamarine;
+}
+input[type=text]{
+  height: 20px;
+  width: 200px;
+  border-radius: 3px;
+}
+input[type=text]:focus{
+  border-color: aquamarine;
+}
+.btn-changeimg  {
+  background-color: white;
+  border-color: lightskyblue;
+  border-radius: 3px;
+  color: rgb(13, 13, 14);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  margin: 2px 2px;
+  transition: 0.3s;
+}
+.btn-changeimg:hover{
+  background-color: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
+.checkbox{
+  height: 15px;
+  width: 16px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+.submit{
+    padding-left: 220px;
+}
+button{
+  background-color: white;
+  border-color: lightskyblue;
+  border-radius: 3px;
+  color: rgb(13, 13, 14);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 10px;
+  margin: 2px 2px;
+  transition: 0.3s;
+}
+button:hover{
+  background-color: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]{
+  background-color: white;
+  border-color: lightskyblue;
+  border-radius: 3px;
+  color: rgb(13, 13, 14);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 10px;
+  margin: 2px 2px;
+  transition: 0.3s;
+}
+input[type=submit]:hover{
+  background-color: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
+#For{
+ position: relative;
+ margin-top: -39%;
+ margin-left: 10em;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 14px;
+ color: blanchedalmond;
+}
+#Name{
+    padding-left: 130px;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: blanchedalmond;
+}    
+
+#Nickname{
+    padding-left: 120px;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: blanchedalmond;
+}  
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0 10px 10px;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 560px;
+  height: 260px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+  left: 50%;
+  margin-left: 280px;
+
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+.footer{
+  grid-area: footer;
+  text-align: center;
+  background-color: aquamarine;
+  min-height: 20px;
+  padding: 10px 10px;
+}

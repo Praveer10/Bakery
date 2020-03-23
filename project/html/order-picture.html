@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style-order.css">
+    <title>Order</title>
+    <link rel="shortcut icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+    <div class="grid">
+        <div class="navbar">
+            <img src="../images/logo.png" alt="Cakey" style="height: 80px; width: 100px;">
+            <nav>
+                            <a href="index.html">Home</a>
+                            <div class="dropdown">
+                              <a class="dropbtn">Menu</a>
+                              <div class="dropdown-content">
+                                <a href="eggmenu.html">Egg or eggless</a>
+                                <a href="picture.html">Picture cake</a>
+                              </div>
+                            </div>
+                            <a href="about.html">About</a>
+                            <a href="#">Contact </a>
+            </nav>
+                  </div>
+     <div class="orderform">
+    <div class="info">
+        <div class="title">
+            <p style="text-align: center; font-weight: bold;">Info about cake</p>
+        </div>
+        <table>
+            <tr>
+                <td> <label for="pounds">1.How many pounds do you want?</label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="number" name="pounds" id="pounds" min="1" max="5" ></td>
+            </tr>
+          <tr>
+            <td><button class="btn-changeimg" onclick="changeImagePerPound()">Confirm</button></td>
+          </tr>
+            <tr>
+                    <td>Total pound price(In Rs.)<p id="price" style="border: 1px solid #82d6c1; border-radius: 2px; height: 25px; width: 55px; "></p></td>
+            </tr>
+            <tr>
+                <td><p>Rs. 700/pound</p></td>
+            </tr>
+
+                <tr>
+                    <td>
+                        <label for="images">Image</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" min="1" max="2" id="images"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <button class="btn-add-image" onclick="pictureOnCake()">Apply image</button>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        <p> <strong>Additional decorations</strong> </p>
+                    </td>
+                </tr>
+    
+             
+                 <tr>
+                    <td>
+                        <input type="checkbox" name="candles" value=50 class="checkbox"> Candles(+Rs.50)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="snow" value=150 class="checkbox"> Snow(+Rs.150)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="hats" value=100 class="checkbox"> Hats(+Rs.100)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="totalPrice()">Ok</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Price(In Rs.)
+                        <p id="totalPrice" style="height: 20px; width: 50px; border: 1px solid #82d6c1;"></p>
+                    </td>
+                </tr>
+                   </table>
+                   <div class="submit">
+                    <input type="submit" value="Submit" onclick="receipt()">
+                           </div>      
+
+     </div>
+
+   </div>           
+      <div class="cake-preview">
+        <div class="img-container" >
+            <img id="imgCake" src="" alt="" >
+         <div class="cakeimg-container" >
+             <img src="" alt="" id="pictureforcake">
+         </div>
+        </div>        
+        <p id="tobehidden">Confirm pound to display the cake size</p> 
+        
+      </div>
+     
+      
+</div>
+   
+<div class="popup" >
+    <span class="popuptext" id="receipt"><div class="popup">
+        <div class="popup-contents">
+            <div class="popup-head">
+                <p>
+                    Payment
+                </p>
+            </div>
+            <div class="popup-body">
+                <table>
+                    <tr>
+                       <td><label for="ID">eSewa ID</label></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="phonenum" type="tel" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Amount">Amount</label></td> 
+                     </tr>
+        
+                            <tr>
+                                <td>
+                                    <input type="number" id="Amount" min="0">
+                                </td>
+                            </tr>
+            
+                         
+                     <tr>
+                        <td><label for="email">Email ID</label></td> 
+                     </tr>
+                     <tr>
+                         <td>
+                             <input id="email" type="email" required >
+                         </td>
+                     </tr>
+                     <tr>
+                        <td>
+                            <button id="pay" onclick="payment()">Pay</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> </span>
+  </div>
+
+      <div class="footer">
+          copyright@cakeyy
+      </div>
+    </div>
+    </body>
+    <script src="../scripts/script-order-picture.js">
+        
+    </script>
+</html> 
